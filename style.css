@@ -8,7 +8,7 @@
 /* HERO */
 .hero {
   height: 100vh;
-  background-image: url("hero.jpg"); /* <-- YOUR IMAGE HERE */
+  background-image: url("hero.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -19,17 +19,18 @@
   position: relative;
 }
 
-/* dark overlay */
+/* Dark overlay */
 .overlay {
   text-align: center;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 40px;
   border-radius: 10px;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 42px;
   margin-bottom: 10px;
+  line-height: 1.1;
 }
 
 .hero p {
@@ -57,18 +58,24 @@
   font-size: 32px;
 }
 
+/* 3 cards per row */
 .grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .card {
-  width: 250px;
   padding: 20px;
   border-radius: 10px;
   background: #f5f5f5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
 }
 
 /* CONTACT */
@@ -79,6 +86,43 @@
   color: white;
 }
 
+.contact-box {
+  margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  color: white;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .overlay {
+    padding: 25px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
 .contact-box {
   margin-top: 20px;
 }
@@ -102,3 +146,4 @@ footer {
     align-items: center;
   }
 }
+

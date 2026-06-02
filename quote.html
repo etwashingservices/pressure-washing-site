@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Quote</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="quote-hero">
+    <div class="overlay">
+      <h1>Request a Free Quote</h1>
+      <p>Driveway & Exterior Cleaning That Speaks for Itself</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="quote-intro">
+    <h2>Tell us what you need</h2>
+    <p>
+      Fill out the form below and we’ll get back to you with a fast, accurate quote.
+    </p>
+  </section>
+
+  <!-- FORM -->
+  <section class="quote-section">
+    <div class="quote-card">
+
+      <!-- ✅ FORMSPREE WORKING FORM -->
+      <form action="https://formspree.io/f/xwvzglnn" method="POST">
+
+        <!-- ADDRESS -->
+        <label>
+          Home Address
+          <input type="text" name="address" placeholder="123 Main St" required>
+        </label>
+
+        <!-- SERVICES -->
+        <div class="service-grid">
+
+          <p class="service-title">Services Needed</p>
+
+          <label class="service-card">
+            <input type="checkbox" name="services" value="Pressure Washing">
+            <span>Pressure Washing</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="services" value="Soft Washing">
+            <span>Soft Washing</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="services" value="Gutter Cleaning">
+            <span>Gutter Cleaning</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="services" value="Window Cleaning">
+            <span>Window Cleaning</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="services" value="Trash Bin Cleaning">
+            <span>Trash Bin Cleaning</span>
+          </label>
+
+        </div>
+
+        <!-- ADDITIONAL DETAILS -->
+        <label>
+          Additional Details (Optional)
+          <textarea
+            name="notes"
+            rows="5"
+            placeholder="Examples:
+- How many bins need cleaning?
+- Do we need to move furniture?
+- Any gates, fences, or obstacles?
+- Anything we should know before arriving?"
+          ></textarea>
+        </label>
+
+        <!-- CONTACT -->
+        <div class="row">
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@email.com">
+          </label>
+
+          <label>
+            Phone
+            <input type="tel" name="phone" placeholder="(555) 123-4567">
+          </label>
+        </div>
+
+        <button type="submit">Get My Quote</button>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- GALLERY PLACEHOLDER -->
+  <section class="quote-gallery-preview">
+    <h2>Our Work</h2>
+    <p>Gallery coming soon — real before & after results.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Call or text for fast response</p>
+
+    <div class="contact-box">
+      <p><strong>Phone:</strong> (281)673-7476</p>
+      <p><strong>Email:</strong> E.T.WashingServices@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 E.T. Detailing and Pressure Washing Services. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

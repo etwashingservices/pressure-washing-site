@@ -1,1 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="detailing.css">
+</head>
 
+<body>
+
+<header class="hero">
+  <div class="hero-overlay">
+    <h1>Professional Auto Detailing</h1>
+    <p>Interior • Exterior • Full Detail Packages</p>
+    <a href="#pricing" class="hero-btn">View Packages</a>
+  </div>
+</header>
+
+<div class="pricing-section" id="pricing">
+
+  <!-- EXTERIOR -->
+  <div class="service-card">
+    <h2>Exterior Detail</h2>
+
+    <label>Package</label>
+    <select data-service="ext" class="pkg">
+      <option value="basic">Standard Exterior</option>
+      <option value="premium">Premium Exterior</option>
+    </select>
+
+    <label>Vehicle</label>
+    <select data-service="ext" class="veh">
+      <option value="sedan">Sedan/Coupe</option>
+      <option value="suv">SUV</option>
+      <option value="minivan">Minivan</option>
+      <option value="truck">Truck</option>
+    </select>
+
+    <div class="price" data-price="ext">$60</div>
+
+    <div class="includes" data-includes="ext">
+      <strong>What’s included:</strong>
+      <ul></ul>
+    </div>
+
+  </div>
+
+  <!-- INTERIOR -->
+  <div class="service-card">
+    <h2>Interior Detail</h2>
+
+    <label>Package</label>
+    <select data-service="int" class="pkg">
+      <option value="basic">Standard Interior</option>
+      <option value="premium">Deep Clean</option>
+    </select>
+
+    <label>Vehicle</label>
+    <select data-service="int" class="veh">
+      <option value="sedan">Sedan/Coupe</option>
+      <option value="suv">SUV</option>
+      <option value="minivan">Minivan</option>
+      <option value="truck">Truck</option>
+    </select>
+
+    <div class="price" data-price="int">$80</div>
+
+    <div class="includes" data-includes="int">
+      <strong>What’s included:</strong>
+      <ul></ul>
+    </div>
+
+  </div>
+
+  <!-- FULL DETAIL -->
+  <div class="service-card">
+    <h2>Full Detail</h2>
+
+    <label>Package</label>
+    <select data-service="full" class="pkg">
+      <option value="standard">Standard Detail</option>
+      <option value="premium">Premium Detail</option>
+    </select>
+
+    <label>Vehicle</label>
+    <select data-service="full" class="veh">
+      <option value="sedan">Sedan/Coupe</option>
+      <option value="suv">SUV</option>
+      <option value="minivan">Minivan</option>
+      <option value="truck">Truck</option>
+    </select>
+
+    <div class="price" data-price="full">$140</div>
+
+    <div class="includes" data-includes="full">
+      <strong>What’s included:</strong>
+      <ul></ul>
+    </div>
+
+
+  </div>
+
+</div>
+
+<!-- BOOKING FORM -->
+<section class="booking-section">
+
+  <h2>Request a Detail Quote</h2>
+
+  <form action="https://formspree.io/f/xpqeapgl" method="POST" class="booking-form">
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Phone or Email</label>
+    <input type="text" name="contact" required>
+
+   <label>Service Requested</label>
+<select name="service" required>
+
+  <optgroup label="Exterior Detail">
+    <option value="Standard Exterior">Standard Exterior</option>
+    <option value="Premium Exterior">Premium Exterior</option>
+  </optgroup>
+
+  <optgroup label="Interior Detail">
+    <option value="Standard Interior">Standard Interior</option>
+    <option value="Deep Clean Interior">Deep Clean Interior</option>
+  </optgroup>
+
+  <optgroup label="Full Detail">
+    <option value="Standard Full Detail">Standard Full Detail</option>
+    <option value="Premium Full Detail">Premium Full Detail</option>
+  </optgroup>
+
+  <optgroup label="Other">
+    <option value="Add-On Services Only">Add-On Services Only</option>
+  </optgroup>
+
+</select>
+
+<label>Vehicle Type</label>
+<select name="vehicle" required>
+  <option value="sedan_coupe">Sedan / Coupe</option>
+  <option value="suv">SUV</option>
+  <option value="minivan">Minivan</option>
+  <option value="truck">Truck</option>
+  <option value="other">Other</option>
+</select>
+
+<label>Urgency</label>
+<select name="urgency" required>
+  <option value="asap">ASAP (1–2 days)</option>
+  <option value="this_week">This week</option>
+  <option value="flexible">Flexible timing</option>
+</select>
+
+<label>Add-On Services (optional)</label>
+
+<div class="addon-box">
+  
+  <label>
+    <input type="checkbox" name="addons" value="Engine Bay Cleaning">
+    Engine Bay Cleaning - $35
+  </label>
+
+  <label>
+    <input type="checkbox" name="addons" value="Pet Hair Removal">
+    Pet Hair Removal - $30+
+  </label>
+
+  <label>
+    <input type="checkbox" name="addons" value="Odor Treatment">
+    Odor Treatment / Refresh - $35+
+  </label>
+
+  <label>
+    <input type="checkbox" name="addons" value="Headlight Restoration">
+    Headlight Polishing/Restoration - $45+
+  </label>
+
+  <label>
+    <input type="checkbox" name="addons" value="Leather Conditioning">
+    Leather Clean/Condition - $30
+  </label>
+
+  <label>
+    <input type="checkbox" name="addons" value="Trim Restore">
+    Trim Restore - $25-$40
+  </label>
+
+  <label>
+    <input type="checkbox" name="addons" value="Door Jamb Wipe">
+    Door Jamb Wipe - $20
+  </label>
+
+</div>
+
+    <label>Other Details (odor, specific time, questions, etc.)</label>
+<textarea name="message" rows="5" placeholder="Example: strong pet odor in rear seats, specific time restraints, interest in service not listed, wash during work, etc."></textarea>
+
+    <button type="submit">Send Request</button>
+
+  </form>
+
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">How long does a detail take?</button>
+    <div class="faq-answer">
+      <p>Depending on the services requested, a detail typically takes 1-3 hours. An exterior only detail can often be completed in under an hour, while a full interior and exterior detail may take 2-3 hours or more. We always strive to work efficiently while maintaining high quality results.</p>
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Do You provide your own water and power?</button>
+    <div class="faq-answer">
+      <p>Yes. We can provide our own water and power when needed, allowing us to perform most detailing services at your location.
+
+However, we prefer access to a standard outdoor water spigot whenever possible. Using your water connection allows us to operate our pressure washer at full performance and provide the most effective exterior cleaning. If access to water or power is unavailable, please let us know when booking so we can confirm the best setup for your service.
+</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What areas do you service?</button>
+    <div class="faq-answer">
+      <p>We proudly serve Katy and the greater West Houston area. Our primary service area includes Katy, Richmond, Cinco Ranch, Fulshear, and more. For customers located farther away, a small travel fee may apply. We'll always let you know of any additional travel costs before your appointment is set.</p>
+    </div>
+  </div>
+
+<div class="faq-item">
+    <button class="faq-question">How do I schedule a detailing appointment?</button>
+    <div class="faq-answer">
+      <p>Scheduling a detailing appointment is easy! You can book online through our website or give us a call. We recommend booking in advance, especially during peak seasons, to ensure availability.</p>
+    </div>
+  </div>
+
+<div class="faq-item">
+    <button class="faq-question">Do I need to be present during the detailing?</button>
+    <div class="faq-answer">
+      <p>For first-time customers, we recommend being present at the start of the appointment so we can walk around the vehicle together, discuss any areas of concern, and explain exactly what services will be performed.
+
+After the initial inspection, you do not need to remain on-site. As long as we have access to the vehicle and any necessary keys, we can complete the detail and notify you when it's finished. For exterior-only services, customer presence is typically not required</p>
+    </div>
+  </div>
+
+<div class="faq-item">
+    <button class="faq-question">Can you detail at my workplace?</button>
+    <div class="faq-answer">
+      <p>In many cases, yes. We can perform detailing services at workplaces, apartments, and other approved locations, provided management allows vehicle detailing and there is adequate space to work safely around the vehicle.
+
+If you're unsure whether your location permits detailing services, contact us before booking and we'll be happy to discuss your options.</p>
+    </div>
+  </div>
+
+<div class="faq-item">
+    <button class="faq-question">Do you offer paint correction, polishing, or ceramic coatings?</button>
+    <div class="faq-answer">
+      <p>Not at this time. We currently focus on professional detailing services and do not yet offer paint correction, polishing, or ceramic coatings.
+
+We plan to add these services in the future after completing additional training and refining our process to ensure high-quality, consistent results.</p>
+    </div>
+  </div>
+
+</section>
+
+<script>
+(function () {
+
+  const pricing = {
+    ext: {
+      basic: { sedan: 40, suv: 55, minivan: 60, truck: 65 },
+      premium: { sedan: 65, suv: 70, minivan: 75, truck: 80 }
+    },
+    int: {
+      basic: { sedan: 65, suv: 85, minivan: 95, truck: 80 },
+      premium: { sedan: 95, suv: 110, minivan: 130, truck: 115 }
+    },
+    full: {
+      standard: { sedan: 95, suv: 130, minivan:145, truck: 135 },
+      premium: { sedan: 175, suv: 195, minivan: 220, truck: 210 }
+    }
+  };
+
+  const includesData = {
+    ext: {
+      basic: [
+        "Hand wash exterior",
+        "Wheel cleaning",
+        "Tire shine",
+        "Light wax finish"
+      ],
+      premium: [
+        "Everything in Basic",
+        "Door Jamb Cleaning",
+        "Trim Dressing"
+      ]
+    },
+    int: {
+      basic: [
+        "Vacuum interior",
+        "Wipe down surfaces",
+        "Window cleaning"
+      ],
+      premium: [
+        "Deep interior clean",
+        "Shampoo seats",
+        "Interior Trim Protection",
+        "Steam-Assisted Cleaning"
+      ]
+    },
+    full: {
+      standard: [
+        "Everything in Standard Exterior",
+        "Everything in Standard Interior",
+      ],
+      premium: [
+        "Everything in Premium Exterior",
+        "Everything in Deep Clean",
+        "Engine bay cleaning"
+      ]
+    }
+  };
+
+  function update(service) {
+    const pkg = document.querySelector(`select.pkg[data-service="${service}"]`);
+    const veh = document.querySelector(`select.veh[data-service="${service}"]`);
+    const price = document.querySelector(`div[data-price="${service}"]`);
+
+    if (!pkg || !veh || !price) return;
+
+    const value = pricing[service][pkg.value][veh.value];
+    price.textContent = "$" + value;
+
+    const list = document.querySelector(`div[data-includes="${service}"] ul`);
+    if (!list) return;
+
+    list.innerHTML = "";
+    includesData[service][pkg.value].forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
+    });
+  }
+
+  function init() {
+    document.querySelectorAll("select.pkg, select.veh").forEach(el => {
+      el.addEventListener("change", function () {
+        const service = this.getAttribute("data-service");
+        update(service);
+      });
+    });
+
+    ["ext", "int", "full"].forEach(update);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+
+})();
+
+// FAQ toggle
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const answer = btn.nextElementSibling;
+    answer.style.display = answer.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-title">Contact Us</p>
+    <p>(281) 673-7476</p>
+    <p>E.T.WashingServices@gmail.com</p>
+
+    <p class="copyright">
+      © 2026 E.T. Detailing and Pressure Washing Services. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

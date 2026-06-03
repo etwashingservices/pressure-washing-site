@@ -390,3 +390,344 @@ footer {
   border-color: #4f46e5;
   box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
 }
+
+
+/* Card styling */
+.service-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h2 {
+  margin-bottom: 5px;
+}
+
+.starting {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Select dropdown */
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Pricing list */
+.prices {
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Includes */
+ul {
+  padding-left: 18px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Button */
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pricing-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #111;
+}
+
+/* GRID LAYOUT */
+.pricing-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+/* allow mobile override properly */
+@media (max-width: 900px) {
+  .pricing-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CARD DESIGN */
+.service-card {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* TITLE */
+.service-card h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* STARTING PRICE */
+.starting {
+  color: #666;
+  margin: 6px 0 14px;
+  font-weight: 500;
+}
+
+/* LABELS */
+label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #444;
+}
+
+/* DROPDOWN */
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 14px;
+}
+
+/* PRICE BOX */
+.prices {
+  margin-top: 14px;
+  padding: 12px;
+  background: #f1f3f5;
+  border-radius: 10px;
+}
+
+.prices p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* LIST */
+ul {
+  margin: 14px 0;
+  padding-left: 18px;
+}
+
+ul li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #111, #333);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+  background: linear-gradient(135deg, #000, #222);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pricing-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+.includes {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.includes ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.includes li {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+
+  .pricing-section {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-card {
+    min-width: 85%;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  /* prevent weird horizontal scrolling bugs */
+  body {
+    overflow-x: hidden;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .pricing-section {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-card {
+    min-width: 85%;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .pricing-section {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-card {
+    min-width: 85%;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #2b2b2b;
+  border-bottom: 1px solid #444;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+.site-header .logo img {
+  height: clamp(38px, 4vw, 55px);
+  width: auto;
+}
